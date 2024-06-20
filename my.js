@@ -59,8 +59,7 @@ async function setMotionListeners() {
         // we check each axis (alpha, beta, gamma) whether they cross a threshold (e.g. 256).
         // Lower = more sensitive, higher = less sensitive. 256 works nice, imho.
         if ((event.rotationRate.alpha > 256 || event.rotationRate.beta > 256 || event.rotationRate.gamma > 256)) {
-            // this.output_message.innerHTML = "SHAKEN!"
-            alert('SHAKEN!');
+            this.output_message.innerHTML = "SHAKEN!"
         }
     })
 }
