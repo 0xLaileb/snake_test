@@ -38,6 +38,7 @@ async function checkMotionPermission() {
     // All other browsers
     } else {
         console.log("This is not IOS!")
+        btn_reqPermission.style.display = "none"
         this.setMotionListeners()
     }
 
