@@ -19,7 +19,6 @@ async function checkMotionPermission() {
         await DeviceOrientationEvent.requestPermission()
         .then(permissionState => {
             if (permissionState == 'granted') {
-                alert('Granted!');
                 console.log("Granted")
                 // Hide special UI; no longer needed
                 btn_reqPermission.style.display = "none"
@@ -39,7 +38,6 @@ async function checkMotionPermission() {
     // All other browsers
     } else {
         console.log("This is not IOS!")
-        alert('This is not IOS!')
         this.setMotionListeners()
     }
 
