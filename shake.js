@@ -19,15 +19,17 @@ async function checkMotionPermission() {
         await DeviceOrientationEvent.requestPermission()
         .then(permissionState => {
             if (permissionState == 'granted') {
+                alert('Granted!');
                 // Hide special UI; no longer needed
                 btn_reqPermission.style.display = "none"
                 this.setMotionListeners()
             }
         })
         .catch( (error) => {
+            alert('Error getting sensor permission!');
             console.log("Error getting sensor permission: %O", error)
             // Show special UI to user, suggesting they should allow motion sensors. The tap-or-click on the button will invoke the permission dialog.
-            btn_reqPermission.style.display = "block"
+            // btn_reqPermission.style.display = "block"
         })
 
     // All other browsers
